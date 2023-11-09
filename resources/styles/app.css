@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .nav-link {
+    @apply relative after:absolute after:inset-x-0 after:overflow-y-auto after:-bottom-1 after:h-[2px] after:bg-neutral-500;
+    @apply after:rounded after:transform-gpu after:scale-x-0 hover:after:scale-x-100 after:origin-right;
+    @apply hover:after:origin-left after:duration-300 after:transition after:ease-in-out after:z-10;
+  }
+
+  .btn-link {
+    @apply h-12 flex items-center px-6 rounded-2xl bg-gray-900 text-xl active:scale-90 transform-gpu;
+    @apply transition-all duration-300 ease-in-out hover:bg-gray-800 text-gray-400;
+  }
+
+  .btn-link > * {
+    @apply transform-gpu transition-all duration-300 ease-in-out;
+  }
+
+  .btn-link:hover > * {
+    @apply translate-x-6;
+  }
+
+  .btn-rounded {
+    @apply w-12 h-12 rounded-2xl bg-gray-700 hover:bg-gray-600 transition-all duration-300;
+    @apply cursor-pointer grid place-content-center active:scale-90 transform-gpu;
+  }
+
+  .fit {
+    display: inline-block;
+    white-space: nowrap;
+  }
+}

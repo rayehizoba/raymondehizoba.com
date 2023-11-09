@@ -1,0 +1,48 @@
+/* Customize the editor background color */
+.editor-styles-wrapper {
+  @apply !px-1.5 md:!px-7 !font-sans;
+}
+
+.edit-post-meta-boxes-area .hndle,
+.block-editor .cf-container__fields > .cf-field {
+  @apply !px-1.5 md:!px-7;
+}
+
+/* Style the paragraph block */
+/*.editor-styles-wrapper p {*/
+/*  font-size: 18px;*/
+/*  line-height: 1.5;*/
+/*  color: #333;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+/*!* Style headings *!*/
+/*.editor-styles-wrapper h1 {*/
+/*  font-size: 36px;*/
+/*  color: #333;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+/*.editor-styles-wrapper h2 {*/
+/*  font-size: 24px;*/
+/*  color: #333;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+/*!* Style links *!*/
+/*.editor-styles-wrapper a {*/
+/*  text-decoration: underline;*/
+/*  color: #0073e3;*/
+/*}*/
+
+/*!* Style lists *!*/
+/*.editor-styles-wrapper ul,*/
+/*.editor-styles-wrapper ol {*/
+/*  margin-left: 20px;*/
+/*}*/
+
+/*!* Style list items *!*/
+/*.editor-styles-wrapper li {*/
+/*  font-size: 16px;*/
+/*  color: #555;*/
+/*}*/

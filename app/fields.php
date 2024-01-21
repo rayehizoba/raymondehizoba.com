@@ -46,6 +46,7 @@ add_action('carbon_fields_register_fields', function () {
                 ->set_attribute('type', 'url'),
         ));
 
+
     Block::make(__('My Shiny Gutenberg Block'))
         ->set_mode('both')
         ->add_fields(array(
@@ -68,6 +69,29 @@ add_action('carbon_fields_register_fields', function () {
                 <div class="block__content">
                     <?php echo apply_filters('the_content', $fields['content']); ?>
                 </div><!-- /.block__content -->
+            </div><!-- /.block -->
+
+            <?php
+        });
+
+
+    Block::make(__('Hero'))
+        ->set_mode('both')
+        ->set_inner_blocks(true)
+        ->set_inner_blocks_template(array(
+            array('core/heading'),
+        ))
+        ->set_allowed_inner_blocks(array(
+            'core/heading',
+            'core/paragraph',
+        ))
+        ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+            ?>
+
+            <div class="block mx-2 rounded-2xl p-3 bg-neutral-800/70 backdrop-blur-xl">
+                <article class="prose prose-h2:text-2xl prose-h2:font-normal prose-a:text-inherit prose-a:no-underline prose-a:!font-normal prose-a:nav-link prose-h2:lg:text-4xl max-w-4xl mb-14">
+                    <?php echo $inner_blocks; ?>
+                </article>
             </div><!-- /.block -->
 
             <?php

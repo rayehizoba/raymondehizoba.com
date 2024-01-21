@@ -19,9 +19,9 @@ add_filter('excerpt_more', function () {
  *
  */
 add_filter('register_block_type_args', function ($args, $name) {
-    if ($name === 'core/heading') {
+    if ($name === 'core/quote') {
         $args['render_callback'] = static function ($attributes, $content) {
-            return view('blocks/core/heading', compact('attributes', 'content'));
+            return view('blocks/core/quote', compact('attributes', 'content'));
         };
     }
 
